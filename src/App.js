@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import EmployeeList from "./components/EmployeeList";
+import { ToastContainer } from "react-toastify"; // Import the ToastContainer
+import "react-toastify/dist/ReactToastify.css"; // Import the CSS for styling
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-100 min-h-screen sm:p-5">
+      <div className="max-w-5xl mx-auto bg-white rounded shadow sm:p-5">
+        <h1 className="text-2xl font-bold mb-5 text-center text-gray-800">
+          Employee Management System
+        </h1>
+        <ToastContainer /> {/* Add this to the top-level component */}
+        <EmployeeList />
+      </div>
     </div>
   );
 }
